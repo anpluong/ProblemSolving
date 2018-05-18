@@ -30,5 +30,5 @@ function anagrams(stringA, stringB) {
     }
 }
 
-anagrams('rail safety', 'fairy tales')
+// anagrams('rail safety', 'fairy tales')
 
