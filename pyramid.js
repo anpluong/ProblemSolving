@@ -18,21 +18,17 @@
 
 function pyramid(rows) {
     let columns = rows*2 - 1;
-    let midpoint = Math.floor((2*rows-1)/2);
+    let midpoint = Math.floor(columns/2);
 
     for (let row = 0; row < rows; row++) {
         let str = '';
-        for (let col = 0; col < columns; col++) {
-            if(col < (rows-1-row)) {
-                str += ' ';
-            }
-            // For right side of middle point
-            else if (col > (rows-1+row)) {
-                str += ' ';
+        for (let column = 0; column < columns; column++) {
+            if(midpoint-row <= column && midpoint+row >= column) {
+                str += '#';
             }
             // For columns around middle point that should have "#"
             else {
-                str += '#';
+                str += ' ';
             }
         }  
         
